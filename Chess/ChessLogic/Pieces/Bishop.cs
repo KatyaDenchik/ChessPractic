@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChessLogic.Pieces
 {
-    public class Bishop : PiecesBase
+    public class Bishop : PieceBase
     {
         public override PieceTypeEnum Type => PieceTypeEnum.Bishop;
         public override Player Color { get; }
@@ -16,7 +16,7 @@ namespace ChessLogic.Pieces
             Color = color;
         }
 
-        public override PiecesBase Copy()
+        public override PieceBase Copy()
         {
             Bishop copy = new Bishop(Color);
             copy.HasMoved = HasMoved;

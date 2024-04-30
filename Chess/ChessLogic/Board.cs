@@ -9,15 +9,15 @@ namespace ChessLogic
 {
     public class Board
     {
-        private readonly PiecesBase[,] pieces = new PiecesBase[8, 8];
+        private readonly PieceBase[,] pieces = new PieceBase[8, 8];
 
-        public PiecesBase this[int row, int col] 
+        public PieceBase this[int row, int col] 
         {
             get { return pieces[row, col]; }
             set { pieces[row, col] = value;}
         }
 
-        public PiecesBase this[Position position]
+        public PieceBase this[Position position]
         {
             get { return this[position.Row, position.Column]; }
             set { this[position.Row, position.Column] = value; }

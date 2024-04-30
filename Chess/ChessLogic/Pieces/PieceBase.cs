@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ChessLogic.Pieces
 {
-    public abstract class PiecesBase
+    public abstract class PieceBase
     {
         public abstract PieceTypeEnum Type { get; }
         public abstract Player Color { get; }
         public bool HasMoved { get; set; } = false;
 
-        public abstract PiecesBase Copy();
+        public abstract PieceBase Copy();
     }
 }
